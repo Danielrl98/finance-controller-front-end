@@ -21,10 +21,25 @@ useEffect(()=>{
   },[]
 )
 
+
+async function deletar(){
+
+  const response = await api.get('listar')
+
+ if(response){
+
+    const deletar =  await api.delete(`http://localhost:5000/deletar/${response.data._id}`)
+
+    if(deletar){
+      list.filter(handleList)
+    }
+
+}}
+
   return (
  
     <div className="container">
-    <ListaContas  list={list}/>
+    <ListaContas  list={list} deletar={deletar} setList={setList}/>
 
     </div>
 

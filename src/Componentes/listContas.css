@@ -1,0 +1,14 @@
+
+td{
+   
+    height:60px;
+    
+}
+td>p {
+    padding:18px 0;
+    line-height: 0;
+}
+button{
+    height:auto;
+    line-height: 0;
+}
